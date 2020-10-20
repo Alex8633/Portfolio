@@ -10,6 +10,7 @@ var gulp 			= require('gulp'),
 	browserSync 	= require('browser-sync'),
 	babel 			= require('gulp-babel'),
 	concat 			= require('gulp-concat'),
+	wait            = require('gulp-wait'),
 	uglify 			= require('gulp-uglify');
 
 sass.compiler = require('node-sass');
@@ -25,7 +26,8 @@ gulp.task('browser-sync', function() {
 
 gulp.task('styles', function() {
 	return gulp.src('./scss/**/*.scss')
-	.pipe(sourcemaps.init()) // récupère tous les fichiers scss
+	.pipe(sourcemaps.init())
+	.pipe(wait(100)) // récupère tous les fichiers scss
 	.pipe(sass({outputStyle: 'compressed'}).on('error', notify.onError())) // compile, si erreur il l'affiche
 	.pipe(rename({suffix: '.min', prefix: ''}))
 	.pipe(autoprefixer(['last 15 versions']))
@@ -55,7 +57,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('code', function() { 
-	return gulp.src('**/*.html', '!node_modules') // en html pour le moment, à modifier si php
+	return gulp.src('**/*.html') // en html pour le moment, à modifier si php
 	.pipe(browserSync.stream());
 });
 

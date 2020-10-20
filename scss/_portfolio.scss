@@ -6,7 +6,6 @@
     margin-top: $dimension2;
     @include flex(column);
 
-
     .portfolio-item {
         width: 100%;
         @include flex();
@@ -21,8 +20,19 @@
         }
     }
 
-    .portfolio-item:not(:last-child) {
+    .portfolio-item {
         margin-bottom: $dimension;
+    }
+
+    .portfolio-item:nth-child(even) {
+        // Portfolio item est composé de deux dive (une de 65 % de largeur pour le contenu
+        // et une de 35 % pour compléter pour tout les éléments paire, je change l'ordre
+        .portfolio-contenu {
+            order: 2;
+            & .text-container-portfolio {
+                margin-right: $dimension;
+            }
+        }
     }
 
     .portfolio-item:nth-child(odd) {
@@ -33,21 +43,14 @@
         }
     }
 
-    // .portfolio-item:nth-child(2) {
-    //     .portfolio-contenu {
-    //         background-color: green;
-    //         & .text-container-portfolio {
-    //             $margin-left: $dimension;
-    //         }
-    //     }
-    // }
-
-
-
     .portfolio-title {
         text-transform: uppercase;
         color: $orange;
         font-size: 35px;
+    }
+
+    img {
+        transition: all 0.2s ease-in-out;
     }
 
     .img-hover:hover {

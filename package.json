@@ -25,6 +25,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "gulp-wait": "0.0.2",
     "node-sass": "^4.14.1"
   }
 }
