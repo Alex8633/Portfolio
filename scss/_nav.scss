@@ -4,8 +4,12 @@ nav {
     background-color: $white;
 }
 
+.nav-portfolio {
+    border: 1px solid $grey;
+}
+
 .navigation-container {
-    width: 1332px;
+    width: $largeur-container;
     margin: auto;
     @include flex(row, space-between, center); // utilisation mixin flex
 
@@ -25,7 +29,7 @@ nav {
         li {
             padding: 0 0.1rem;
         }
-        
+
         li a {
             color: black;
             line-height: 70px;
