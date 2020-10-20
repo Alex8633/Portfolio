@@ -1,0 +1,44 @@
+.header {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/1620.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & p {
+        color: $white;
+        margin-bottom: $dimension;
+    }
+
+     .header-text {
+         position: absolute;
+         left: 294px;
+         top: 330px;
+         .name {
+             margin-bottom: $dimension;
+         }
+         .bienvenue {
+             margin-bottom: $dimension;
+         }
+
+         .header-a {
+             text-decoration: none;
+             color: $white;
+         }
+
+         .header-a:hover {
+             color: $orange;
+         }
+     }
+}
+
+.name {
+    font-size: 60px;
+    color: $orange;
+}
+
+.bienvenue {
+    font-size: 40px;
+    color: $white;
+}
+
