@@ -1,0 +1,93 @@
+section {
+    margin-bottom: $dimension;
+}
+
+
+.image-about-container {
+    height: 470px;
+
+    .img-about {
+        height: 100%;
+    }
+}
+
+.a-propos-title {
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $orange;
+    margin-bottom: 30px;
+}
+
+.a-propos-container {
+    margin: auto;
+    margin-top: $dimension;
+    width: $largeur-container;
+
+
+    .a-propos-paragraph {
+        font-size: 25px;
+        text-align: justify;
+        line-height: 120%;
+    }
+}
+
+.competences-container {
+    margin: auto;
+    width: 688px;
+    @include flex(column);
+
+    .competence-item:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    .competence-item {
+        @include flex(row, space-between, center);
+
+        .comp-logo {
+            width: 20%;
+            @include flex(row, space-evenly, center);
+        }
+
+        .comp-paragraph {
+            line-height: 1.5rem;
+        }
+
+        .bar-flex {
+            width: 70%;
+            background-color: $light-grey;
+            height: 1.5rem;
+            @include flex();
+            border-radius: 5px;
+
+            .bar-fill {
+                background-color: $orange;
+                border-radius: 5px 0 0 5px;
+            }
+        }
+    }
+}
+
+// style section site web
+
+.site-web-container {
+    width: $largeur-container;
+    margin: auto;
+    @include flex(row, space-evenly);
+
+    .site-web-container-item {
+        border: 1px solid $light-grey;
+        width: 20%;
+        @include flex(column, stretch, center);
+
+        & i {
+            padding-top: 2rem;;
+        }
+    }
+
+    .site-web-container-title {
+        font-family: 'Roboto-Bold';
+        color: $orange;
+        padding: 2rem 0;
+    }
+}

@@ -17,6 +17,12 @@
         .portfolio-contenu {
             width: 65%;
             @include flex();
+
+            & .text-container-portfolio {
+                .portfolio-paragraph {
+                    margin-top: 20px;
+                }
+            }
         }
     }
 

@@ -1,0 +1,14 @@
+.footer {
+    height: 70px;
+    background-color: $light-grey;
+    .footer-container {
+        width: $largeur-container;
+        margin: auto;
+        @include flex(row, space-between, center);
+
+        h1 {
+            line-height: 70px;
+            text-transform: uppercase;
+        }
+    }
+}
