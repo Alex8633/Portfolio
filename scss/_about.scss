@@ -81,7 +81,7 @@ section {
         @include flex(column, stretch, center);
 
         & i {
-            padding-top: 2rem;;
+            padding-top: 2rem;
         }
     }
 
@@ -89,5 +89,6 @@ section {
         font-family: 'Roboto-Bold';
         color: $orange;
         padding: 2rem 0;
+        font-size: 1.5rem;
     }
 }

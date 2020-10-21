@@ -1,0 +1,66 @@
+.contact-container {
+    width: $largeur-container;
+    margin: auto;
+    padding: $demi 0;
+    @include flex(row, space-evenly);
+
+    .contact-information {
+        width: 30%;
+        @include flex(column);
+
+        .social-items {
+            @include flex();
+        }
+
+        .mail {
+            padding-top: $quart;
+        }
+
+        .tel {
+            padding-top: $quart;
+        }
+
+        .email {
+            font-family: 'Roboto-Bold';
+            font-size: 20px;
+            padding-bottom: 1rem;
+        }
+
+        .telephone {
+            font-family: 'Roboto-Bold';
+            font-size: 20px;
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+        }
+
+        .social-items {
+            padding-top: $quart;
+
+            i:not(:last-child) {
+                padding-right: 2rem;
+            }
+        }
+    }
+
+    // style formulaire
+    .contact-formulaire {
+        width: 30%;
+        @include flex(column);
+
+        .form-contact div {
+            padding-top: $quart;
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid $light-grey;
+        }
+    }
+
+    .contact-h2 {
+        font-size: 25px;
+        color: $orange;
+        text-transform: uppercase;
+    }
+}

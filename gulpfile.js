@@ -42,7 +42,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'./libs/jquery-3.5.1.min.js',
 		// './app/libs/plugins/**/*.js',
-		'.assets/js/src/**/*.js'
+		'./assets/js/src/**/*.js'
 	])
 	.pipe(sourcemaps.init())
 	.pipe(babel({
@@ -51,7 +51,7 @@ gulp.task('scripts', function() {
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify())
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('./app/js/dist'))
+	.pipe(gulp.dest('assets/js/dist'))
 	.pipe(notify({message: 'Bravo : js compilé !!!', onLast: true}))
 	.pipe(browserSync.stream());
 });
