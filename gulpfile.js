@@ -51,7 +51,7 @@ gulp.task('scripts', function() {
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify())
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('assets/js/dist'))
+	.pipe(gulp.dest('./assets/js/dist'))
 	.pipe(notify({message: 'Bravo : js compilé !!!', onLast: true}))
 	.pipe(browserSync.stream());
 });
@@ -63,7 +63,7 @@ gulp.task('code', function() {
 
 gulp.task('watch', function() {
 	gulp.watch('./scss/**/*.scss', gulp.parallel('styles'));
-	gulp.watch(['./libs/**/*.js','./js/src/**/*.js'], gulp.parallel('scripts'));
+	gulp.watch(['./libs/**/*.js','./assets/js/src/**/*.js'], gulp.parallel('scripts'));
 	gulp.watch('**/*.html', gulp.parallel('code')); // en html pour le moment, à modifier si php
 });
 
