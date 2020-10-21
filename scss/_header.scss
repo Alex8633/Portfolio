@@ -15,7 +15,7 @@
          left: 294px;
          top: 330px;
          .name {
-             margin-bottom: $dimension;
+             margin-bottom: $quart;
          }
          .bienvenue {
              margin-bottom: $dimension;
@@ -24,6 +24,10 @@
          .header-a {
              text-decoration: none;
              color: $white;
+         }
+
+         .header-paragraph {
+             font-size: 2rem;
          }
 
          .header-a:hover {
