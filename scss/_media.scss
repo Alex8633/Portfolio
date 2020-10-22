@@ -1,0 +1,98 @@
+@media screen and (max-width: 600px) {
+
+    // media queries pour la navbarr
+    // nav {
+    //     visibility: hidden;
+    // }
+
+    nav {
+        position: relative;
+
+        ul {
+            display: none !important;
+        }
+
+        .navigation-container {
+            h1 {
+                line-height: 70px;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    span {
+        display: inline-block;
+        width: 100%;
+        height: 4px;
+        margin: 0.3rem 0;
+        background-color: $white;
+        border-radius: 4px;
+    }
+
+    .navigation-responsive-container {
+        background-color: black;
+        padding: 0.6rem 1rem;
+        border-radius: 5px;
+        position: absolute;
+        width: 40px;
+        height: 45px;
+        top: 5%;
+        left: 80%;
+    }
+
+    .navigation-responsive-container:hover {}
+
+    // nav déroulante
+    .is-opened {
+        display: block !important;
+        height: calc(100vh - 70px);
+        width: 100%;
+        background-color: $grey;
+    }
+
+    #navDeroule {
+
+        ul {
+            @include flex(column, space-evenly, center);
+            height: 100%;
+        }
+
+        li a {
+            text-decoration: none;
+            color: $orange;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+    }
+
+
+    // media queries pour le header;
+
+    .header {
+        .header-text {
+            position: static;
+            text-align: center;
+            padding: 0 1rem;
+        }
+    }
+
+    // media queries pour le portfolio
+
+    .portfolio-container {
+        width: 95%;
+
+        .portfolio-item {
+            @include flex(column, flex-start, center);
+
+            .portfolio-contenu {
+                @include flex(column);
+
+                .text-container-portfolio {
+                    margin: 0 !important;
+                    @include flex(column, center, center);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
