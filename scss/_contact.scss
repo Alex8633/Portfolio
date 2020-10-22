@@ -80,6 +80,7 @@
         }
 
         .submit {
+            border: solid 1px transparent;
             margin-top: 2rem;
             color: $white;
             font-size: 1rem;
@@ -93,6 +94,7 @@
         .submit:hover {
             background-color: $white;
             color: $orange;
+            border: solid 1px black;
         }
 
     }
