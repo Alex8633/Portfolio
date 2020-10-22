@@ -1,4 +1,8 @@
 @media screen and (max-width: 600px) {
+    
+    .fixed-position {
+        position: fixed;
+     }
 
     // media queries pour la navbarr
     // nav {
@@ -40,14 +44,12 @@
         left: 80%;
     }
 
-    .navigation-responsive-container:hover {}
-
     // nav déroulante
     .is-opened {
         display: block !important;
         height: calc(100vh - 70px);
         width: 100%;
-        background-color: $grey;
+        background-color: black;
     }
 
     #navDeroule {
@@ -72,7 +74,7 @@
         .header-text {
             position: static;
             text-align: center;
-            padding: 0 1rem;
+            padding: 2rem 1rem;
         }
     }
 
@@ -94,5 +96,63 @@
                 }
             }
         }
+    }
+
+    // media queries about
+
+    .image-about-container {
+        margin: auto;
+        width: 95%;
+    }
+
+    .a-propos-container {
+        margin: auto;
+        width: 95%;
+    }
+
+    .competences-container {
+        width: 95%;
+        .competence-item {
+            flex-direction: column;
+        }
+    }
+
+    .site-web-container-item:not(:last-child) {
+        margin-bottom: $quart;
+    }
+
+    .site-web-container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+
+        .site-web-container-item {
+            width: 50%;
+        }
+        
+    }
+
+    // media queries contact
+
+    .contact-container {
+        width: 95%;
+        flex-direction: column;
+
+        .contact-information {
+            width: 100%;
+            padding: 1rem 0;
+            margin-bottom: $quart;
+        }
+
+        .contact-formulaire {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    // media queries footer
+
+    .footer .footer-container {
+        width: 95%;
     }
 }

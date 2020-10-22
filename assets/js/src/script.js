@@ -3,6 +3,7 @@ let speed = 50; /* The speed/duration of the effect in milliseconds */
 let i = 0;
 
 
+
 function typeWriter() {
   if (i < txt.length) {
     document.getElementById("typewritter").innerHTML += txt.charAt(i);
@@ -25,11 +26,3 @@ var target = document.getElementById("navDeroule");
 navResp.addEventListener("click", function(e) {
   target.classList.toggle('is-opened');
 });
-
-function myFunction() {
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
